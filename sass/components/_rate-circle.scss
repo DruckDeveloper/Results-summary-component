@@ -1,0 +1,20 @@
+@use '../general/variables' as *;
+@use '../utils/mixins' as *;
+
+.circle {
+  display: inline-block;
+  border-radius: 100%;
+  @include flex-full(center, center);
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background: linear-gradient(180deg, $Light-royal-blue 0%, $Light-slate-blue 100%);
+
+  &-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+
+  &-rating {
+    color: $Pale-blue;
+  }
+}

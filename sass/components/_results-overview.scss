@@ -1,0 +1,30 @@
+@use '../general/variables' as *;
+@use '../utils/mixins' as *;
+
+.item-1 {
+  & .title {
+    padding: 0.5rem;
+  }
+
+  border-radius: 0 0 1.5rem 1.5rem;
+  color: $White;
+  text-align: center;
+  background: linear-gradient(180deg, $Light-slate-blue 0%, $Light-royal-blue 80%, $Violet-blue 100%);
+  @include flex-full(space-evenly, center);
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (min-width: 900px) {
+    border-radius: 1.5rem;
+  }
+
+  & .adjective {
+    font-size: 2rem;
+  }
+
+  & .paragraph {
+    max-width: 60%;
+    padding: 0.8rem 0;
+    font-size: 18px;
+  }
+}
